@@ -68,7 +68,7 @@ def adjustment(sample, relative_trends, seasons_tilda, season_len):
 
 def check_converge_criteria(prev_remainders, remainders):
     diff = np.sqrt(np.mean(np.square(remainders-prev_remainders)))
-    if diff < 1e-10:
+    if diff < 1e-2:
         return True
     else:
         return False
